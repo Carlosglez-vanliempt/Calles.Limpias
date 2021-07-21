@@ -1,3 +1,9 @@
+/*
+        CARLOS GONZÁLEZ VAN LIEMPT
+            Proyecto de Calles Limpias de Nieve
+            Fundamentos de Programación y computadores
+*/
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -147,6 +153,7 @@ public class CallesLimpias {
                         System.out.println("Actualmente la calle " + calle + " está " + fichero_a_Modificar[i][2] + ".\n" +
                                 "Escriba la modificación de estado:");
                         System.out.print("->");
+
                         modificacion = teclado.next();
                         fichero_a_Modificar[i][2] = modificacion;
                         escribirEnFichero(fichero_a_Modificar, nombreMunicipio + ".csv", false);
@@ -311,13 +318,10 @@ public class CallesLimpias {
                         }else{
                             nuevaLineaLista[i][j] = "No presenta ninguna información extra";
                         }
-
                     }
                 }
             }
-
             escribirEnFichero(nuevaLineaLista, "listaMunicipios.csv", true);
-
         }
 
           public static void escribirEnFichero (String [][] nuevaLinea, String ruta, boolean NoSobreEscribir){
